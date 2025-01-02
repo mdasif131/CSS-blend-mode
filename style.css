@@ -1,0 +1,207 @@
+:root {
+  --text-color: #2d2d2d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: poppins, sans-serif;
+  color: var(--text-color);
+  font-weight: 300;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.main-image {
+  width: min(24rem, 90%);
+  margin: 1rem auto;
+}
+main {
+  padding: 2rem;
+  margin: 2rem auto 2rem;
+  width: min(700px, 90%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+main div {
+  padding: 1rem;
+  border: solid 1px var(--text-color);
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+.ex1 {
+  height: 300px;
+  background-color: #a7f0f9;
+  filter: brightness(120%) hue-rotate(45deg);
+}
+.ex1 img {
+  mix-blend-mode: multiply;
+}
+
+/*mix-blend-mode*/
+.ex2 {
+  background: url(img/sea.jpg);
+  background-size: cover;
+  position: relative;
+  /*	filter: grayscale(1) brightness(130%);*/
+}
+.ex2::before,
+.ex2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.ex2::after {
+  background: hotpink;
+  mix-blend-mode: multiply;
+}
+.ex2::before {
+  background: navy;
+  mix-blend-mode: lighten;
+}
+
+/*background-blend-mode*/
+.ex3 {
+  background: url(img/tag.jpg), url(img/sea.jpg),
+    linear-gradient(rgba(156, 39, 176, 56%), rgba(0, 188, 212, 59%));
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+/*multiply*/
+.ex4 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: multiply;
+  filter: brightness(130%);
+}
+
+/*Screen*/
+.ex5 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+/*overlay*/
+.ex6 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+/*Darken*/
+.ex7 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+/*lighten*/
+.ex8 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+/*color dodge*/
+.ex9 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: color-dodge;
+}
+
+/*color burn*/
+.ex10 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: color-burn;
+  filter: brightness(150%);
+}
+
+/*hard light*/
+.ex11 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: hard-light;
+}
+
+/*Soft light*/
+.ex12 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+/*difference*/
+.ex13 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: difference;
+}
+/*exclusion*/
+.ex14 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: exclusion;
+}
+
+/*hue*/
+.ex15 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: hue;
+}
+
+/*saturation*/
+.ex16 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: saturation;
+}
+
+/*color*/
+.ex17 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: color;
+}
+
+/*luminosity*/
+.ex18 {
+  background: url(img/sea.jpg), linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+/*multiple blending modes*/
+.ex19 {
+  background: url(img/tag.jpg), url(img/sea.jpg),
+    linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: multiply, overlay;
+}
+
+/*enhanve the same image*/
+.ex20 {
+  background: url(img/sea.jpg), url(img/sea.jpg),
+    linear-gradient(rgba(14, 120, 173), #dd9511);
+  background-size: cover;
+  background-blend-mode: overlay;
+}
